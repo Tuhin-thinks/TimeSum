@@ -199,42 +199,42 @@ class SumTime:
 # --------------------UNCOMMENT THE TEST SNIPPETS AND RUN THE FILE TO TEST THE WORKING------------------
 # Test snippets
 
-# testing declaration
-s1 = SumTime(time_string="10 00")
-s2 = SumTime("1 30")
-print(f"-->s1 => {s1}, s2 => {s2}")
-
-# testing __radd__
-s3 = ['1hrs', '10mins', '30secs', '1hrs50mins30secs'] + s1
-print("s3 = ['1hrs', '10mins', '30secs', '1hrs5mins30secs'] + s1 =>", s3)
-
-# testing __add__
-s3 = s1 + s2
-print("-->s3 = s1+s2 =>", s3)
-
-# testing __iadd__
-s3 += s2 + "1 00"
-print(f"-->s3 += s2 + \"1 00\"=>", s3)
-
-# testing __str__
-# print("-->To String:", str(s3))
-
-# testing @staticmethod to_sumtime()
-print("-->to sumtime:", type(SumTime.to_sumtime(str(s3))))
-
-# testing overall test cases
-# -> perform addition of time strings
-
-s1 = SumTime("1 20")
-print(f's1 = SumTime("1 20")={s1}')
-s1 += ["20mins", "1hrs 10mins", "50mins"]  # expected 3hrs 40mins
-print(f's1 += ["20mins", "1hrs 10mins", "50mins"]={s1}')
-
-s1 = s1 + ['20mins']
-print(f"s1 = s1 + [\"20mins\"]={s1}")  # expected 4hrs
-
-s1 += '10mins'
-print(f"s1 += '10mins'=", s1)
-
-td = s1.to_timedelta()
-print(f"td = s1.to_timedelta() =>{td.seconds} seconds , type:({type(td)})")
+# # testing declaration
+# s1 = SumTime(time_string="10 00")
+# s2 = SumTime("1 30")
+# print(f"-->s1 => {s1}, s2 => {s2}")
+#
+# # testing __radd__
+# s3 = ['1hrs', '10mins', '30secs', '1hrs50mins30secs'] + s1
+# print("s3 = ['1hrs', '10mins', '30secs', '1hrs5mins30secs'] + s1 =>", s3)
+#
+# # testing __add__
+# s3 = s1 + s2
+# print("-->s3 = s1+s2 =>", s3)
+#
+# # testing __iadd__
+# s3 += s2 + "1 00"
+# print(f"-->s3 += s2 + \"1 00\"=>", s3)
+#
+# # testing __str__
+# # print("-->To String:", str(s3))
+#
+# # testing @staticmethod to_sumtime()
+# print("-->to sumtime:", type(SumTime.to_sumtime(str(s3))))
+#
+# # testing overall test cases
+# # -> perform addition of time strings
+#
+# s1 = SumTime("1 20")
+# print(f's1 = SumTime("1 20")={s1}')
+# s1 += ["20mins", "1hrs 10mins", "50mins"]  # expected 3hrs 40mins
+# print(f's1 += ["20mins", "1hrs 10mins", "50mins"]={s1}')
+#
+# s1 = s1 + ['20mins']
+# print(f"s1 = s1 + [\"20mins\"]={s1}")  # expected 4hrs
+#
+# s1 += '10mins'
+# print(f"s1 += '10mins'=", s1)
+#
+# td = s1.to_timedelta()
+# print(f"td = s1.to_timedelta() =>{td.seconds} seconds , type:({type(td)})")
